@@ -1,10 +1,20 @@
+const express = require('express');
+const app = express();
 
-const http = require('http');
+/* const http = require('http');
 
-const hostname = 'localhost';
+const hostname = 'localhost'; */
 const port = 3000;
 
-const server = http.createServer((req, res) => {
+app.get('/', (req, res) => {
+  res.send('Hello World!');
+});
+
+const server = app.listen(port, () => {
+  console.log(`Express running → PORT ${server.address().port}`);
+});
+
+/* const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end('Hellooo World!\n');
@@ -12,4 +22,4 @@ const server = http.createServer((req, res) => {
 
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
-});
+}); */
