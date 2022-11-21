@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 app.set('view engine', 'pug');
+require('dotenv').config()
+
 /* const http = require('http');
 
 const hostname = 'localhost'; */
