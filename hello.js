@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 app.set('view engine', 'pug');
+app.set('views', './views');
 require('dotenv').config()
 
 /* const http = require('http');
